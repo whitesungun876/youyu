@@ -1,0 +1,62 @@
+import Link from "next/link";
+
+export default function HomePage() {
+  return (
+    <main style={{ padding: 24, maxWidth: 720, margin: "0 auto" }}>
+      <h1 style={{ fontSize: 28, fontWeight: 700, marginBottom: 12 
+}}>友余</h1>
+      <p style={{ lineHeight: 1.6, marginBottom: 20 }}>
+        用更轻的节奏，把理财做成可坚持的习惯：先有余，再变富。
+      </p>
+
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+        <Link
+          href="/onboarding"
+          style={{
+            padding: "10px 14px",
+            borderRadius: 10,
+            background: "#111",
+            color: "#fff",
+            textDecoration: "none",
+          }}
+        >
+          开始设置节奏
+        </Link>
+
+        <Link
+          href="/dashboard"
+          style={{
+            padding: "10px 14px",
+            borderRadius: 10,
+            border: "1px solid #ddd",
+            textDecoration: "none",
+            color: "#111",
+          }}
+        >
+          进入看板
+        </Link>
+
+        <Link
+          href="/chat"
+          style={{
+            padding: "10px 14px",
+            borderRadius: 10,
+            border: "1px solid #ddd",
+            textDecoration: "none",
+            color: "#111",
+          }}
+        >
+          去对话
+        </Link>
+      </div>
+    </main>
+  );
+}
+import 
+{ redirect } from 
+"next/navigation";
+
+export default function HomePage() {
+  redirect("/onboarding");
+}
+
