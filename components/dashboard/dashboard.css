@@ -1,0 +1,15 @@
+/* components/dashboard/dashboard.css */
+
+/* 波浪横向循环动画 */
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.wave {
+  animation: wave 3s linear infinite;
+}

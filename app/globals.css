@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 友余：米白 / 莫兰迪绿 / 月光黄 */
+  --yy-bg: 248 247 244;          /* 米白 */
+  --yy-card: 255 255 255;        /* 卡片底 */
+  --yy-text: 26 26 26;           /* 主文字 */
+  --yy-muted: 95 99 104;         /* 次文字 */
+
+  --yy-green: 122 145 131;       /* 莫兰迪绿 */
+  --yy-yellow: 238 226 158;      /* 月光黄 */
+  --yy-line: 228 224 216;        /* 边框线 */
+  --yy-glass: 255 255 255 / 0.55;/* 毛玻璃 */
+}
+
+body {
+  background: rgb(var(--yy-bg));
+  color: rgb(var(--yy-text));
+}
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.wave {
+  animation: waveMove 3.8s linear infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: .25; transform: scale(1); }
+  50% { opacity: .85; transform: scale(1.15); }
+}
+.breathe-dot {
+  animation: breathe 2.4s ease-in-out infinite;
+}
